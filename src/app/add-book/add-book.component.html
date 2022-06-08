@@ -1,0 +1,48 @@
+<div class="modalWindow" [formGroup]="bookForm" >
+    <h3>Добавити книгу</h3>
+    <div class="section">
+      <label for="title">Назва книги:</label>
+      <input
+        type="text"
+        name="title"
+        placeholder="Назва книги"
+        formControlName="title"
+      />
+    </div>
+  
+    <div class="section">
+      <label for="description">Опис:</label>
+      <input
+        type="text"
+        name="description"
+        placeholder="Опис"
+        formControlName="description"
+      />
+    </div>
+  
+    <div class="section">
+      <label for="publishDate">Дата публікації:</label>
+      <input
+        type="text"
+        name="publishDate"
+        placeholder="Дата публікації"
+        formControlName="publishDate"
+      />
+    </div>
+  
+    <div class="section">
+      <label for="PageCount">Кількість сторінок:</label>
+      <input
+        type="text"
+        name="PageCount"
+        placeholder="Кількість сторінок"
+        formControlName="PageCount"
+      />
+    </div>
+    <button 
+        type="button"
+        [disabled]="!bookForm.valid"
+        (click)="saveBook()"
+
+    >Добавити книгу</button>
+  </div>

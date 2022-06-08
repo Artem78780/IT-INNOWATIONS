@@ -1,0 +1,15 @@
+.modalWindow {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 15px 0px 0px 15px;
+}
+.section {
+  padding: 4px;
+  width: 100%;
+}
+.section input {
+  width: 100%;
+  padding: 3px;
+  border-radius: 4px;
+}

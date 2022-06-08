@@ -1,0 +1,29 @@
+<!-- <app-search-book></app-search-book> -->
+<app-book-modal-window [book]="selectedBook"></app-book-modal-window>
+
+<div class="search">
+  <p>Пошук</p>
+  <input type="text" placeholder="Пошук" [(ngModel)]="searchBook" />
+</div>
+
+<table matSort (matSortChange)="sortData($event)">
+  <tr>
+    <th mat-sort-header="title">Назава книги</th>
+    <th mat-sort-header="pageCount">К/c</th>
+    <th mat-sort-header="description">Опис</th>
+    <th mat-sort-header="publishDate">Дата публікації</th>
+  </tr>
+
+  <tr
+    *ngFor="let book of books | searchFilter: searchBook"
+    (click)="onSelect(book)"
+    [class.selected]="book === selectedBook"
+  >
+    <td>{{ book.title }}</td>
+    <td>{{ book.pageCount }}</td>
+    <td>{{ book.description }}</td>
+    <td>{{ book.publishDate | date: "mediumDate" }}</td>
+  </tr>
+</table>
+
+<app-add-book></app-add-book>

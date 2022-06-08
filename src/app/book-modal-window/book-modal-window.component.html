@@ -1,0 +1,41 @@
+<div *ngIf="book" class="modalWindow">
+  <div class="section">
+    <label for="title">Назва книги:</label>
+    <input
+      type="text"
+      name="title"
+      placeholder="Title book"
+      [(ngModel)]="book.title"
+    />
+  </div>
+
+  <div class="section">
+    <label for="description">Опис:</label>
+    <input
+      type="text"
+      name="description"
+      placeholder="Description book"
+      [(ngModel)]="book.description"
+    />
+  </div>
+
+  <div class="section">
+    <label for="publishDate">Дата публікації:</label>
+    <input
+      type="text"
+      name="publishDate"
+      placeholder="Publish Date book"
+      [(ngModel)]="book.publishDate"
+    />
+  </div>
+
+  <div class="section">
+    <label for="PageCount">Кількість сторінок:</label>
+    <input
+      type="text"
+      name="PageCount"
+      placeholder="Page Count book"
+      [(ngModel)]="book.pageCount"
+    />
+  </div>
+</div>
